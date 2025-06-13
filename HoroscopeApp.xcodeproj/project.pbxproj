@@ -13,6 +13,7 @@
 		B29AD3322DFC72D20019715C /* Base in Resources */ = {isa = PBXBuildFile; fileRef = B29AD3312DFC72D20019715C /* Base */; };
 		B29AD3342DFC72D20019715C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B29AD3332DFC72D20019715C /* Assets.xcassets */; };
 		B29AD3372DFC72D20019715C /* Base in Resources */ = {isa = PBXBuildFile; fileRef = B29AD3362DFC72D20019715C /* Base */; };
+		B29AD33F2DFC736E0019715C /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = B29AD33E2DFC736E0019715C /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		B29AD3332DFC72D20019715C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B29AD3362DFC72D20019715C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B29AD3382DFC72D20019715C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B29AD33E2DFC736E0019715C /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				B29AD3332DFC72D20019715C /* Assets.xcassets */,
 				B29AD3352DFC72D20019715C /* LaunchScreen.storyboard */,
 				B29AD3382DFC72D20019715C /* Info.plist */,
+				B29AD33E2DFC736E0019715C /* .gitignore */,
 			);
 			path = HoroscopeApp;
 			sourceTree = "<group>";
@@ -125,6 +128,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B29AD33F2DFC736E0019715C /* .gitignore in Resources */,
 				B29AD3342DFC72D20019715C /* Assets.xcassets in Resources */,
 				B29AD3372DFC72D20019715C /* Base in Resources */,
 				B29AD3322DFC72D20019715C /* Base in Resources */,
