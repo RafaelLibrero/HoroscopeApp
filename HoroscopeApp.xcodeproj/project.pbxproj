@@ -9,23 +9,27 @@
 /* Begin PBXBuildFile section */
 		B29AD32B2DFC72D20019715C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29AD32A2DFC72D20019715C /* AppDelegate.swift */; };
 		B29AD32D2DFC72D20019715C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29AD32C2DFC72D20019715C /* SceneDelegate.swift */; };
-		B29AD32F2DFC72D20019715C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29AD32E2DFC72D20019715C /* ViewController.swift */; };
+		B29AD32F2DFC72D20019715C /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29AD32E2DFC72D20019715C /* ListViewController.swift */; };
 		B29AD3322DFC72D20019715C /* Base in Resources */ = {isa = PBXBuildFile; fileRef = B29AD3312DFC72D20019715C /* Base */; };
 		B29AD3342DFC72D20019715C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B29AD3332DFC72D20019715C /* Assets.xcassets */; };
 		B29AD3372DFC72D20019715C /* Base in Resources */ = {isa = PBXBuildFile; fileRef = B29AD3362DFC72D20019715C /* Base */; };
 		B29AD33F2DFC736E0019715C /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = B29AD33E2DFC736E0019715C /* .gitignore */; };
+		B29AD3422DFC75670019715C /* Horoscope.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29AD3412DFC75670019715C /* Horoscope.swift */; };
+		B29AD3452DFC79CE0019715C /* HoroscopeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29AD3442DFC79CE0019715C /* HoroscopeViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B29AD3272DFC72D20019715C /* HoroscopeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HoroscopeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B29AD32A2DFC72D20019715C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B29AD32C2DFC72D20019715C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B29AD32E2DFC72D20019715C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B29AD32E2DFC72D20019715C /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		B29AD3312DFC72D20019715C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B29AD3332DFC72D20019715C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B29AD3362DFC72D20019715C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B29AD3382DFC72D20019715C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B29AD33E2DFC736E0019715C /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		B29AD3412DFC75670019715C /* Horoscope.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Horoscope.swift; sourceTree = "<group>"; };
+		B29AD3442DFC79CE0019715C /* HoroscopeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroscopeViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,9 +62,11 @@
 		B29AD3292DFC72D20019715C /* HoroscopeApp */ = {
 			isa = PBXGroup;
 			children = (
+				B29AD3432DFC79A20019715C /* ViewCalls */,
+				B29AD3402DFC75520019715C /* Data */,
 				B29AD32A2DFC72D20019715C /* AppDelegate.swift */,
 				B29AD32C2DFC72D20019715C /* SceneDelegate.swift */,
-				B29AD32E2DFC72D20019715C /* ViewController.swift */,
+				B29AD32E2DFC72D20019715C /* ListViewController.swift */,
 				B29AD3302DFC72D20019715C /* Main.storyboard */,
 				B29AD3332DFC72D20019715C /* Assets.xcassets */,
 				B29AD3352DFC72D20019715C /* LaunchScreen.storyboard */,
@@ -68,6 +74,22 @@
 				B29AD33E2DFC736E0019715C /* .gitignore */,
 			);
 			path = HoroscopeApp;
+			sourceTree = "<group>";
+		};
+		B29AD3402DFC75520019715C /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				B29AD3412DFC75670019715C /* Horoscope.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		B29AD3432DFC79A20019715C /* ViewCalls */ = {
+			isa = PBXGroup;
+			children = (
+				B29AD3442DFC79CE0019715C /* HoroscopeViewCell.swift */,
+			);
+			path = ViewCalls;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,7 +164,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B29AD32F2DFC72D20019715C /* ViewController.swift in Sources */,
+				B29AD3452DFC79CE0019715C /* HoroscopeViewCell.swift in Sources */,
+				B29AD3422DFC75670019715C /* Horoscope.swift in Sources */,
+				B29AD32F2DFC72D20019715C /* ListViewController.swift in Sources */,
 				B29AD32B2DFC72D20019715C /* AppDelegate.swift in Sources */,
 				B29AD32D2DFC72D20019715C /* SceneDelegate.swift in Sources */,
 			);
