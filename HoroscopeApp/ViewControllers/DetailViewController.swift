@@ -8,11 +8,21 @@
 import UIKit
 
 class DetailViewController: UIViewController {
+    
+    @IBOutlet weak var horoscopeImageView: UIImageView!
+    @IBOutlet weak var horoscopeNameLabel: UILabel!
+    @IBOutlet weak var horosocopeDatesLabel: UILabel!
+    
+    var horoscope: Horoscope!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationItem.title = horoscope.name
 
-        // Do any additional setup after loading the view.
+        horoscopeNameLabel.text = horoscope.name
+        horosocopeDatesLabel.text = horoscope.dates
+        horoscopeImageView.image = horoscope.getImage()
     }
     
 

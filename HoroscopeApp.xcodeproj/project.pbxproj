@@ -3,13 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		B29AD32B2DFC72D20019715C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29AD32A2DFC72D20019715C /* AppDelegate.swift */; };
 		B29AD32D2DFC72D20019715C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29AD32C2DFC72D20019715C /* SceneDelegate.swift */; };
-		B29AD32F2DFC72D20019715C /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29AD32E2DFC72D20019715C /* ListViewController.swift */; };
 		B29AD3322DFC72D20019715C /* Base in Resources */ = {isa = PBXBuildFile; fileRef = B29AD3312DFC72D20019715C /* Base */; };
 		B29AD3342DFC72D20019715C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B29AD3332DFC72D20019715C /* Assets.xcassets */; };
 		B29AD3372DFC72D20019715C /* Base in Resources */ = {isa = PBXBuildFile; fileRef = B29AD3362DFC72D20019715C /* Base */; };
@@ -22,7 +21,6 @@
 		B29AD3272DFC72D20019715C /* HoroscopeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HoroscopeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B29AD32A2DFC72D20019715C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B29AD32C2DFC72D20019715C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B29AD32E2DFC72D20019715C /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		B29AD3312DFC72D20019715C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B29AD3332DFC72D20019715C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B29AD3362DFC72D20019715C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -31,6 +29,10 @@
 		B29AD3412DFC75670019715C /* Horoscope.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Horoscope.swift; sourceTree = "<group>"; };
 		B29AD3442DFC79CE0019715C /* HoroscopeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroscopeViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		B22EC2F42E01B4C10050BCC9 /* ViewControllers */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = ViewControllers; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		B29AD3242DFC72D20019715C /* Frameworks */ = {
@@ -62,11 +64,11 @@
 		B29AD3292DFC72D20019715C /* HoroscopeApp */ = {
 			isa = PBXGroup;
 			children = (
+				B22EC2F42E01B4C10050BCC9 /* ViewControllers */,
 				B29AD3432DFC79A20019715C /* ViewCalls */,
 				B29AD3402DFC75520019715C /* Data */,
 				B29AD32A2DFC72D20019715C /* AppDelegate.swift */,
 				B29AD32C2DFC72D20019715C /* SceneDelegate.swift */,
-				B29AD32E2DFC72D20019715C /* ListViewController.swift */,
 				B29AD3302DFC72D20019715C /* Main.storyboard */,
 				B29AD3332DFC72D20019715C /* Assets.xcassets */,
 				B29AD3352DFC72D20019715C /* LaunchScreen.storyboard */,
@@ -106,6 +108,9 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				B22EC2F42E01B4C10050BCC9 /* ViewControllers */,
 			);
 			name = HoroscopeApp;
 			productName = HoroscopeApp;
@@ -166,7 +171,6 @@
 			files = (
 				B29AD3452DFC79CE0019715C /* HoroscopeViewCell.swift in Sources */,
 				B29AD3422DFC75670019715C /* Horoscope.swift in Sources */,
-				B29AD32F2DFC72D20019715C /* ListViewController.swift in Sources */,
 				B29AD32B2DFC72D20019715C /* AppDelegate.swift in Sources */,
 				B29AD32D2DFC72D20019715C /* SceneDelegate.swift in Sources */,
 			);
