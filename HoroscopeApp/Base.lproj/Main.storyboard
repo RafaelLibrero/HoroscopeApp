@@ -45,9 +45,15 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="heart.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="0fJ-RA-Ia2">
+                                                    <rect key="frame" x="338" y="26" width="44" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                                    <color key="tintColor" systemColor="systemRedColor"/>
+                                                </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="favoriteImageView" destination="0fJ-RA-Ia2" id="GhZ-8H-xcK"/>
                                             <outlet property="horoscopeImageView" destination="bq0-3S-3ia" id="rpx-dK-ZZY"/>
                                             <outlet property="horoscopeNameLabel" destination="4PM-Sv-Vmi" id="JIV-Sr-6g8"/>
                                             <outlet property="horosocopeDatesLabel" destination="QAg-Bq-Mwm" id="Sxc-h0-IOb"/>
@@ -124,10 +130,14 @@
                             <barButtonItem title="Item" image="square.and.arrow.up" catalog="system" id="Qlx-fe-aEZ"/>
                             <barButtonItem title="Item" image="suit.heart" catalog="system" id="OML-Li-FNU">
                                 <color key="tintColor" systemColor="systemRedColor"/>
+                                <connections>
+                                    <action selector="setFavorite:" destination="Rqm-6Y-UJ6" id="f24-hS-6Bq"/>
+                                </connections>
                             </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="favoriteMenu" destination="OML-Li-FNU" id="XIA-YH-l4r"/>
                         <outlet property="horoscopeImageView" destination="aY9-hD-3Of" id="bwr-KC-cNL"/>
                         <outlet property="horoscopeNameLabel" destination="UF9-UM-ywf" id="pn4-Ex-SlR"/>
                         <outlet property="horosocopeDatesLabel" destination="Dwx-3j-EHN" id="rJj-i3-ywr"/>
@@ -157,6 +167,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="heart.fill" catalog="system" width="128" height="107"/>
         <image name="square.and.arrow.up" catalog="system" width="110" height="128"/>
         <image name="suit.heart" catalog="system" width="128" height="107"/>
         <systemColor name="systemBackgroundColor">

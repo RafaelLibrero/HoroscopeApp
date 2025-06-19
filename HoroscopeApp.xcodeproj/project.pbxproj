@@ -32,6 +32,7 @@
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		B22EC2F42E01B4C10050BCC9 /* ViewControllers */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = ViewControllers; sourceTree = "<group>"; };
+		B2D879802E045EEC00411DD9 /* Utils */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Utils; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +65,7 @@
 		B29AD3292DFC72D20019715C /* HoroscopeApp */ = {
 			isa = PBXGroup;
 			children = (
+				B2D879802E045EEC00411DD9 /* Utils */,
 				B22EC2F42E01B4C10050BCC9 /* ViewControllers */,
 				B29AD3432DFC79A20019715C /* ViewCalls */,
 				B29AD3402DFC75520019715C /* Data */,
@@ -111,6 +113,7 @@
 			);
 			fileSystemSynchronizedGroups = (
 				B22EC2F42E01B4C10050BCC9 /* ViewControllers */,
+				B2D879802E045EEC00411DD9 /* Utils */,
 			);
 			name = HoroscopeApp;
 			productName = HoroscopeApp;
