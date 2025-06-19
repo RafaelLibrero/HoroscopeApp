@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ListViewController: UIViewController, UITableViewDataSource {
+class ListViewController: UIViewController, UITableViewDataSource, UISearchBarDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -18,9 +18,29 @@ class ListViewController: UIViewController, UITableViewDataSource {
         // Do any additional setup after loading the view.
         
         tableView.dataSource = self
+        
+        let searchController = UISearchController(searchResultsController: nil)
+        searchController.searchBar.delegate = self
+        self.navigationItem.searchController = searchController
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        tableView.reloadData()
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        horoscopeList = if searchText.isEmpty {
+            Horoscope.horoscopeList
+        } else {
+            Horoscope.horoscopeList.filter { horoscope in
+                horoscope.name.range(of: searchText, options: .caseInsensitive) != nil
+            }
+        }
+        tableView.reloadData()
+    }
+
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        horoscopeList = Horoscope.horoscopeList
         tableView.reloadData()
     }
     
