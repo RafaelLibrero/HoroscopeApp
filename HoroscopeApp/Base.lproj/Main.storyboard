@@ -30,6 +30,7 @@
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bq0-3S-3ia">
                                                     <rect key="frame" x="20" y="-3" width="103" height="103"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="tintColor" systemColor="labelColor"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Horoscope Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4PM-Sv-Vmi">
                                                     <rect key="frame" x="131" y="26" width="163" height="24"/>
@@ -111,7 +112,32 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aY9-hD-3Of">
                                         <rect key="frame" x="76" y="0.0" width="240" height="240"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" systemColor="labelColor"/>
                                     </imageView>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="b1b-oJ-lUW">
+                                        <rect key="frame" x="8" y="329" width="377" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <segments>
+                                            <segment title="Daily"/>
+                                            <segment title="Weekly"/>
+                                            <segment title="Monthly"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="didChangePeriod:" destination="Rqm-6Y-UJ6" eventType="valueChanged" id="vrc-Kt-zhV"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="EgG-H9-06k">
+                                        <rect key="frame" x="8" y="368" width="377" height="254"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="bNY-Qi-CnQ">
+                                        <rect key="frame" x="186" y="485" width="20" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </activityIndicatorView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
@@ -127,7 +153,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="qQe-bn-p7Z">
                         <rightBarButtonItems>
-                            <barButtonItem title="Item" image="square.and.arrow.up" catalog="system" id="Qlx-fe-aEZ"/>
+                            <barButtonItem title="Item" image="square.and.arrow.up" catalog="system" id="Qlx-fe-aEZ">
+                                <connections>
+                                    <action selector="share:" destination="Rqm-6Y-UJ6" id="0F2-I5-dPj"/>
+                                </connections>
+                            </barButtonItem>
                             <barButtonItem title="Item" image="suit.heart" catalog="system" id="OML-Li-FNU">
                                 <color key="tintColor" systemColor="systemRedColor"/>
                                 <connections>
@@ -139,8 +169,10 @@
                     <connections>
                         <outlet property="favoriteMenu" destination="OML-Li-FNU" id="XIA-YH-l4r"/>
                         <outlet property="horoscopeImageView" destination="aY9-hD-3Of" id="bwr-KC-cNL"/>
+                        <outlet property="horoscopeLuckTextView" destination="EgG-H9-06k" id="FBM-No-35d"/>
                         <outlet property="horoscopeNameLabel" destination="UF9-UM-ywf" id="pn4-Ex-SlR"/>
                         <outlet property="horosocopeDatesLabel" destination="Dwx-3j-EHN" id="rJj-i3-ywr"/>
+                        <outlet property="loadingView" destination="bNY-Qi-CnQ" id="1pK-gV-YxQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0oD-Mx-jop" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -170,6 +202,9 @@
         <image name="heart.fill" catalog="system" width="128" height="107"/>
         <image name="square.and.arrow.up" catalog="system" width="110" height="128"/>
         <image name="suit.heart" catalog="system" width="128" height="107"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
